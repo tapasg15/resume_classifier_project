@@ -281,6 +281,62 @@ def preprocess_text(t):
     t = re.sub(r'[^a-z0-9\s]', ' ', t)
     return t.strip()
 
+# ------------------ NEW: preprocessing helpers that match training ------------------
+# These helpers mirror the `build_processed_text` logic used during training so
+# inference matches training preprocessing (SKILL_ and YEARS_ tokens are appended).
+COMMON_SKILLS_TOKENS = [s for s in [
+    "python","java","c++","c#","sql","mysql","postgresql","mongodb",
+    "html","css","javascript","react","node","django","flask",
+    "power bi","excel","tableau","pandas","numpy","tensorflow","keras",
+    "nlp","git","github","aws","docker","redis","kubernetes","jenkins","selenium"
+] ]
+
+def clean_text_basic(t):
+    if not isinstance(t, str):
+        return ""
+    t = re.sub(r'https?://\S+', ' ', t)
+    t = re.sub(r'\S+@\S+', ' ', t)
+    t = re.sub(r'\+?\d[\d\s\-\(\)]{6,}', ' ', t)
+    t = t.lower()
+    t = re.sub(r'[^a-z0-9\s]', ' ', t)
+    t = re.sub(r'\s+', ' ', t).strip()
+    return t
+
+def extract_years_from_text(t):
+    m = re.search(r'(\d{1,2})\s*(?:years|yrs|y)\b', t, flags=re.I)
+    if m:
+        try:
+            y = int(m.group(1))
+            if y < 0:
+                return 0
+            if y > 40:
+                return 40
+            return y
+        except:
+            return 0
+    return 0
+
+def extract_skills_list(t):
+    t_low = t.lower()
+    found = []
+    for s in COMMON_SKILLS_TOKENS:
+        if s in t_low:
+            found.append(s.replace(' ', '_'))
+    return sorted(set(found))
+
+def build_processed_text(raw):
+    cleaned = clean_text_basic(raw)
+    yrs = extract_years_from_text(raw)
+    skills = extract_skills_list(raw)
+    extra = ""
+    if skills:
+        extra += " " + " ".join([f"SKILL_{s}" for s in skills])
+    if yrs:
+        extra += f" YEARS_{yrs}"
+    return (cleaned + " " + extra).strip()
+
+# -----------------------------------------------------------------
+# Keep your existing COMMON_SKILLS (for display) unchanged so UI remains same
 COMMON_SKILLS = [
     "python","java","c++","c#","sql","mysql","postgresql","mongodb",
     "html","css","javascript","react","node","django","flask",
@@ -292,6 +348,8 @@ def extract_skills(text):
     text_lower = (text or "").lower()
     found = [s for s in COMMON_SKILLS if s in text_lower]
     return sorted(set(found))
+
+# rest of helper functions unchanged
 
 def highlight_skills_in_text(text, skills):
     if not text:
@@ -416,8 +474,9 @@ if page == "Classify Single":
         manual_skill_input = st.text_input("Manual skills (comma separated) - optional")
         if st.button("Classify"):
             raw_text = (extract_text_from_uploaded(uploaded) if uploaded else text_area) or ""
-            t = preprocess_text(raw_text)
-            if not t:
+            # Use the same preprocessing as used in training
+            processed_text = build_processed_text(raw_text)
+            if not processed_text:
                 st.error("Please provide resume text or upload a file.")
             else:
                 with st.spinner("Classifying..."):
@@ -428,20 +487,20 @@ if page == "Classify Single":
                     probs = None
                     try:
                         if pipeline is not None:
-                            predicted = pipeline.predict([t])[0]
+                            predicted = pipeline.predict([processed_text])[0]
                             if hasattr(pipeline, "predict_proba"):
-                                probs = pipeline.predict_proba([t])[0]
+                                probs = pipeline.predict_proba([processed_text])[0]
                                 confidence = float(np.max(probs))*100
                             if hasattr(pipeline, "classes_"):
                                 classes = list(pipeline.classes_)
                         else:
-                            demo_score = sum([1 for k in ["python","sql","react","machine learning","aws"] if k in t])
-                            predicted = "Data Analyst" if "data" in t else ("Web Developer" if "html" in t or "css" in t else "Software Developer")
+                            demo_score = sum([1 for k in ["python","sql","react","machine learning","aws"] if k in processed_text])
+                            predicted = "Data Analyst" if "data" in processed_text else ("Web Developer" if "html" in processed_text or "css" in processed_text else "Software Developer")
                             confidence = min(90, 40 + demo_score*10)
                     except Exception as e:
                         st.error("Prediction failed: " + str(e))
                         predicted = "ERROR"
-                    # skills
+                    # skills (display uses raw_text for readability)
                     if manual_skill_input:
                         skills_list = [s.strip() for s in manual_skill_input.split(",") if s.strip()]
                     else:
@@ -514,7 +573,7 @@ if page == "Classify Single":
             st.session_state["sample_text"] = "Web developer skilled in HTML, CSS, JavaScript, React, Node.js and Git."
             safe_rerun()
         st.markdown("---")
-        st.write("Pipeline present:" , "✅" if pipeline else "❌")
+        st.write("Pipeline present:", "✅" if pipeline else "❌")
         st.write("WordCloud:", "✅" if WORDCLOUD_AVAILABLE else "❌")
         st.write("SHAP:", "✅" if SHAP_AVAILABLE else "❌")
         st.write("PDF Export (reportlab):", "✅" if REPORTLAB_AVAILABLE else "❌")
@@ -535,7 +594,8 @@ elif page == "Batch Classify":
                         st.error("CSV must contain 'text' column")
                         continue
                     for _, r in df.iterrows():
-                        txt = preprocess_text(str(r["text"]))
+                        raw_txt = str(r["text"])
+                        txt = build_processed_text(raw_txt)
                         if pipeline:
                             try:
                                 pred = pipeline.predict([txt])[0]
@@ -545,12 +605,12 @@ elif page == "Batch Classify":
                         else:
                             pred = "Data Analyst" if "data" in txt else "Web Developer" if "html" in txt else "Software Developer"
                             prob = None
-                        skills = extract_skills(txt)
-                        score_val, _ = resume_score(txt, skills)
+                        skills = extract_skills(raw_txt)
+                        score_val, _ = resume_score(raw_txt, skills)
                         rows.append({"filename": f.name, "pred": pred, "prob": prob, "skills": skills, "score": score_val})
                 else:
                     txt_raw = extract_text_from_uploaded(f)
-                    txt = preprocess_text(txt_raw)
+                    txt = build_processed_text(txt_raw)
                     if pipeline:
                         try:
                             pred = pipeline.predict([txt])[0]
@@ -560,8 +620,8 @@ elif page == "Batch Classify":
                     else:
                         pred = "Data Analyst" if "data" in txt else "Web Developer" if "html" in txt else "Software Developer"
                         prob = None
-                    skills = extract_skills(txt)
-                    score_val, _ = resume_score(txt, skills)
+                    skills = extract_skills(txt_raw)
+                    score_val, _ = resume_score(txt_raw, skills)
                     rows.append({"filename": f.name, "pred": pred, "prob": prob, "skills": skills, "score": score_val})
             except Exception as e:
                 logger.exception("Batch item failed: " + str(e))
@@ -660,7 +720,8 @@ elif page == "Explainability":
     st.subheader("Explainability")
     text = st.text_area("Paste resume text for explainability", height=240)
     if st.button("Explain"):
-        t = preprocess_text(text)
+        # use same processed text for explainability to keep features aligned
+        t = build_processed_text(text)
         if not t:
             st.error("Please paste some text")
         else:
