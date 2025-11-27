@@ -1,10 +1,14 @@
 streamlit
-pandas
 numpy
+pandas
 scikit-learn
 joblib
-PyPDF2
-python-docx
+pyyaml
 matplotlib
 seaborn
+requests
+wordcloud
 shap
+reportlab
+PyPDF2
+python-docx
