@@ -1,74 +1,274 @@
 {
-  "accuracy": 0.25,
+  "accuracy": 0.5,
   "report": {
-    "Data Analyst": {
+    "Cloud Engineer": {
       "precision": 0.0,
       "recall": 0.0,
       "f1-score": 0.0,
-      "support": 1.0
+      "support": 2.0
+    },
+    "Data Analyst": {
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1-score": 0.6,
+      "support": 4.0
+    },
+    "DevOps Engineer": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1-score": 0.5,
+      "support": 2.0
     },
     "Machine Learning Engineer": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1-score": 0.6666666666666666,
+      "support": 4.0
+    },
+    "Product Manager": {
       "precision": 0.0,
       "recall": 0.0,
       "f1-score": 0.0,
-      "support": 1.0
+      "support": 2.0
+    },
+    "QA Engineer": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1-score": 0.5,
+      "support": 2.0
+    },
+    "Sales Executive": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1-score": 0.8,
+      "support": 2.0
     },
     "Software Developer": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1-score": 0.3333333333333333,
+      "support": 4.0
+    },
+    "System Architect": {
       "precision": 0.0,
       "recall": 0.0,
       "f1-score": 0.0,
-      "support": 1.0
+      "support": 2.0
+    },
+    "System Designer": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1-score": 0.6666666666666666,
+      "support": 2.0
+    },
+    "UI/UX Designer": {
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1-score": 0.5,
+      "support": 2.0
     },
     "Web Developer": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 1.0
-    },
-    "accuracy": 0.25,
-    "macro avg": {
-      "precision": 0.25,
-      "recall": 0.25,
-      "f1-score": 0.25,
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1-score": 0.5714285714285714,
       "support": 4.0
+    },
+    "accuracy": 0.5,
+    "macro avg": {
+      "precision": 0.4305555555555555,
+      "recall": 0.5,
+      "f1-score": 0.42817460317460315,
+      "support": 32.0
     },
     "weighted avg": {
-      "precision": 0.25,
-      "recall": 0.25,
-      "f1-score": 0.25,
-      "support": 4.0
+      "precision": 0.48958333333333326,
+      "recall": 0.5,
+      "f1-score": 0.45684523809523814,
+      "support": 32.0
     }
   },
   "confusion_matrix": [
     [
       0,
+      0,
       1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
       0,
       0
     ],
     [
       1,
-      0,
-      0,
-      0
-    ],
-    [
       1,
       0,
       0,
-      0
-    ],
-    [
+      0,
+      0,
+      0,
+      1,
       0,
       0,
       0,
       1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      2
     ]
   ],
   "classes": [
+    "Cloud Engineer",
     "Data Analyst",
+    "DevOps Engineer",
     "Machine Learning Engineer",
+    "Product Manager",
+    "QA Engineer",
+    "Sales Executive",
     "Software Developer",
+    "System Architect",
+    "System Designer",
+    "UI/UX Designer",
     "Web Developer"
   ]
 }
