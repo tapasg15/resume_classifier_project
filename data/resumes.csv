@@ -4,21 +4,171 @@ text,category
 "Experience with C#, .NET Core, SQL Server, LINQ, and Azure cloud deployment. Built desktop inventory management app.",Software Developer
 "Worked on Android development using Kotlin, Firebase, MVVM, and Retrofit. Published app on Play Store.",Software Developer
 "Built scalable backend services using Node.js, Express, MongoDB, and Redis with JWT auth.",Software Developer
+"Developed RESTful APIs using Django and PostgreSQL, implemented JWT-based auth and caching using Redis.",Software Developer
+"Experience in Go (Golang), building concurrent microservices with gRPC and Docker.",Software Developer
+"Worked on payment gateway integration, Kafka event streaming, and scalable backend modules.",Software Developer
+"Developed ERP modules using Java, Hibernate, Oracle DB and Maven build cycle.",Software Developer
+"Built automation scripts using Python, Bash and cron jobs for server maintenance.",Software Developer
+"Created microservice architecture with Spring Boot, Eureka Server, and API Gateway.",Software Developer
+"Experience with Ruby on Rails, PostgreSQL and background job processing using Sidekiq.",Software Developer
+"Developed CLI tools in Python for log analysis and system monitoring.",Software Developer
+"Created backend pipelines using Node.js, TypeScript, Sequelize ORM and MySQL.",Software Developer
+"Experience in C++ STL, memory optimization and developing multithreaded applications.",Software Developer
+"Implemented OAuth2.0 authentication and social login in Flask backend.",Software Developer
+"Built desktop application using Electron.js, integrated SQLite and local storage",Software Developer
+"Experience working with AWS Lambda, API Gateway, S3 and DynamoDB for serverless apps.",Software Developer
+"Developed integration modules with SOAP and REST APIs for fintech systems.",Software Developer
+"Implemented clean architecture in Kotlin backend with Ktor framework and PostgreSQL.",Software Developer
 
 "Designed responsive websites using HTML, CSS, JavaScript and Tailwind CSS. Familiar with SEO and UI/UX.",Web Developer
 "Experience in React.js, Redux, REST APIs, Firebase and building dashboards. Worked on portfolio website.",Web Developer
 "Built WordPress websites with custom themes and plugins. Experienced in PHP and MySQL.",Web Developer
 "Familiar with MERN stack: MongoDB, Express, React, Node. Built social media clone project.",Web Developer
 "Skilled in Bootstrap, jQuery, AJAX and integrating third-party APIs. Built real estate listing website.",Web Developer
+"Developed responsive UI using React, Next.js and Tailwind, optimized for Lighthouse performance.",Web Developer
+"Worked with Vue.js, Vuex, Axios and built reusable UI components for dashboards.",Web Developer
+"Experience in Svelte, routing, client-side state management and API integration.",Web Developer
+"Built landing pages with GSAP animations, AOS scroll effects and pixel-perfect design.",Web Developer
+"Developed admin dashboards using Chart.js, React Router and Material UI.",Web Developer
+"Worked on Shopify theme customization, Liquid templates and checkout integrations.",Web Developer
+"Experience in Angular, RxJS, Observables and modular architecture.",Web Developer
+"Integrated Stripe payments, React forms, and built ecommerce components.",Web Developer
+"Developed a blogging platform using Node.js, EJS templates and MongoDB.",Web Developer
+"Created full MERN applications including authentication, CRUD APIs and image uploads.",Web Developer
+"Skilled in CSS preprocessors like SASS/SCSS and BEM architecture.",Web Developer
+"Built PWAs with service workers, offline caching and manifest setup.",Web Developer
+"Optimized website SEO using meta tags, schema markup and page speed improvements.",Web Developer
+"Experience in WordPress Elementor, WooCommerce setup and theme modification.",Web Developer
+"Developed real-time chat app using Socket.io and React context API.",Web Developer
 
 "Skilled in Excel, SQL, Power BI, and data cleaning. Created dashboards for sales and revenue analysis.",Data Analyst
 "Worked on ETL pipelines, Pandas, NumPy, Matplotlib, and Seaborn. Built data visualization for healthcare dataset.",Data Analyst
 "Experience in Tableau, MySQL, forecasting models, and KPI reporting for marketing data.",Data Analyst
 "Performed statistical analysis using Python, Scikit-learn and created business insights for retail dataset.",Data Analyst
 "Built Excel-based MIS reports, automated analytics with Python, and worked with CSV and SQL datasets.",Data Analyst
+"Analyzed telecom churn data using Python, NumPy, SQL and created insights for retention strategy.",Data Analyst
+"Developed Power BI dashboards for HR analytics including hiring trends and attrition metrics.",Data Analyst
+"Performed A/B test evaluation, statistical significance tests and user behavior analysis.",Data Analyst
+"Experience with Google BigQuery, SQL joins, CTEs and analytics functions.",Data Analyst
+"Cleaned and transformed raw sales data using Pandas, handled missing values and outliers.",Data Analyst
+"Created Tableau storyboards and KPI dashboards for hospital operations.",Data Analyst
+"Performed time-series analysis using ARIMA and exponential smoothing models.",Data Analyst
+"Built customer segmentation using clustering (K-Means, DBSCAN) and visualization.",Data Analyst
+"Automated Excel reports using VBA macros and Python openpyxl library.",Data Analyst
+"Performed correlation analysis, hypothesis testing and feature evaluation.",Data Analyst
+"Worked with Apache Airflow for ETL workflows and scheduling pipelines.",Data Analyst
+"Created MIS reports and automated monthly revenue dashboards.",Data Analyst
+"Performed supply-chain data analysis and built interactive charts using Seaborn.",Data Analyst
+"Used SQL window functions for ranking, running totals and partition analytics.",Data Analyst
+"Analyzed finance data, built risk metrics, and provided BI insights using Power Query.",Data Analyst
 
 "Implemented machine learning models using Scikit-learn: logistic regression, SVM, decision trees, random forest.",Machine Learning Engineer
 "Worked on NLP preprocessing using NLTK and spaCy. Built text classification model for sentiment analysis.",Machine Learning Engineer
 "Implemented CNN using TensorFlow/Keras for image classification on MNIST dataset. Achieved 97% accuracy.",Machine Learning Engineer
 "Developed end-to-end ML pipeline including data cleaning, feature scaling, model training, hyperparameter tuning.",Machine Learning Engineer
 "Built recommendation system using collaborative filtering and cosine similarity. Used Pandas and NumPy.",Machine Learning Engineer
+"Implemented XGBoost and Random Forest models for fraud detection with hyperparameter tuning.",Machine Learning Engineer
+"Worked on NLP embedding models like Word2Vec, TF-IDF and FastText for classification.",Machine Learning Engineer
+"Trained BERT-based transformer model for text extraction and sentence classification.",Machine Learning Engineer
+"Implemented LSTM networks for time-series forecasting of energy consumption.",Machine Learning Engineer
+"Developed image classification models using EfficientNet and Keras.",Machine Learning Engineer
+"Built MLOps pipeline with MLflow, model tracking and automated evaluation.",Machine Learning Engineer
+"Performed feature engineering including normalization, encoding and PCA reduction.",Machine Learning Engineer
+"Built object detection model using YOLOv5 for real-time detection tasks.",Machine Learning Engineer
+"Optimized model performance using grid search and Bayesian optimization.",Machine Learning Engineer
+"Deployed ML model using Flask API and Docker containerization.",Machine Learning Engineer
+"Implemented anomaly detection using Isolation Forest and autoencoders.",Machine Learning Engineer
+"Worked with HuggingFace transformers for sentiment and NER tasks.",Machine Learning Engineer
+"Performed model explainability using SHAP and LIME for business understanding.",Machine Learning Engineer
+"Built collaborative-filtering and matrix-factorization based recommendation engines.",Machine Learning Engineer
+"Created end-to-end ML pipeline including data ingestion, feature store and model deployment.",Machine Learning Engineer
+
+"Designed enterprise architecture using microservices, event-driven systems, and distributed caching.",System Architect
+"Created high-level solution design with scalability, fault-tolerance, and load balancing strategies.",System Architect
+"Experienced with architectural patterns like CQRS, Event Sourcing and Domain Driven Design.",System Architect
+"Built reference architecture for cloud migration using AWS, Kubernetes and API Gateway.",System Architect
+"Defined system integration flows using message brokers like Kafka and RabbitMQ.",System Architect
+"Created architecture diagrams, data flow diagrams, and deployment topology for enterprise apps.",System Architect
+"Led technical decision-making, choosing tech stack, communication patterns and API standards.",System Architect
+"Performed capacity planning and optimized system performance for large-scale traffic.",System Architect
+"Collaborated with security teams to ensure encryption, IAM policies and compliance models.",System Architect
+"Designed SOA-based architecture with REST, GraphQL, and asynchronous processing modules.",System Architect
+
+"Created system design documents including ER diagrams, use-case diagrams and activity flows.",System Designer
+"Designed data models, API specifications and logical architecture for web applications.",System Designer
+"Performed low-level design (LLD) for modules including class diagrams and database schema.",System Designer
+"Designed state machines and sequence diagrams for real-time applications.",System Designer
+"Worked on requirement analysis and translating them into technical design documents.",System Designer
+"Designed UI flow, navigation map, and system interaction diagrams.",System Designer
+"Created object-oriented design using SOLID principles and design patterns.",System Designer
+"Designed integration modules between microservices using REST and message queues.",System Designer
+"Prepared component-level design to support maintainability and scalability.",System Designer
+"Collaborated with architects and developers to refine technical specifications.",System Designer
+
+"Performed manual testing including functional, regression and smoke testing for web apps.",QA Engineer
+"Created automated test scripts using Selenium WebDriver and Python.",QA Engineer
+"Experience with JUnit, TestNG and writing unit and integration tests.",QA Engineer
+"Conducted API testing using Postman and automated with Newman CLI.",QA Engineer
+"Designed test cases, test scenarios and executed UAT cycles.",QA Engineer
+"Performed load testing using JMeter and analyzed performance metrics.",QA Engineer
+"Worked with bug tracking tools like Jira and Azure DevOps Boards.",QA Engineer
+"Built Cypress test suites for frontend UI automation.",QA Engineer
+"Performed mobile app testing using Appium and adb tools.",QA Engineer
+"Implemented CI pipeline for automated testing using Jenkins and GitHub Actions.",QA Engineer
+
+"Designed wireframes and prototypes using Figma for web and mobile apps.",UI/UX Designer
+"Conducted user research, usability testing and created user journey maps.",UI/UX Designer
+"Created visual designs, style guides, typography and color palettes.",UI/UX Designer
+"Designed responsive layouts and interaction flows using Adobe XD.",UI/UX Designer
+"Built interactive prototypes with animations and micro-interactions.",UI/UX Designer
+"Worked with developers to ensure pixel-perfect UI implementation.",UI/UX Designer
+"Created design systems and reusable component libraries.",UI/UX Designer
+"Performed heuristic evaluation and improved product usability.",UI/UX Designer
+"Designed dashboards, charts and data-heavy UI for enterprise apps.",UI/UX Designer
+"Created accessibility-compliant designs following WCAG guidelines.",UI/UX Designer
+
+"Defined product roadmap, sprint planning and feature prioritization using Agile.",Product Manager
+"Conducted market research and competitive analysis to define product strategy.",Product Manager
+"Created PRDs, wireframes and user stories for engineering teams.",Product Manager
+"Collaborated with cross-functional teams including design, development and QA.",Product Manager
+"Tracked KPIs and user engagement metrics using analytics dashboards.",Product Manager
+"Worked on user interviews and feedback sessions to shape product features.",Product Manager
+"Managed backlog grooming and sprint execution with Jira.",Product Manager
+"Defined GTM strategy and coordinated with sales and marketing teams.",Product Manager
+"Analyzed customer pain points and defined solutions aligned with business goals.",Product Manager
+"Monitored product adoption and proposed improvements for next releases.",Product Manager
+
+"Generated leads through cold calling and email campaigns improving conversion rate by 25%.",Sales Executive
+"Built client relationships and achieved monthly sales targets consistently.",Sales Executive
+"Conducted product demos and negotiated pricing with enterprise clients.",Sales Executive
+"Tracked sales pipeline using CRM tools like HubSpot and Zoho.",Sales Executive
+"Worked with marketing team for campaign planning and outreach strategy.",Sales Executive
+"Performed competitor analysis and prepared sales pitch decks.",Sales Executive
+"Managed post-sale relationship and improved retention metrics.",Sales Executive
+"Handled B2B sales including proposal creation and contract closure.",Sales Executive
+"Participated in trade shows and generated potential business leads.",Sales Executive
+"Maintained sales reports and forecasting spreadsheets for leadership.",Sales Executive
+
+"Deployed scalable applications on AWS EC2, S3, RDS and CloudFront.",Cloud Engineer
+"Configured IAM roles, policies and implemented secure access controls.",Cloud Engineer
+"Built serverless applications using AWS Lambda, API Gateway and DynamoDB.",Cloud Engineer
+"Completed cloud migration for monolithic apps to microservices.",Cloud Engineer
+"Worked on Azure VMs, Blob storage, VNets and Azure Functions.",Cloud Engineer
+"Set up GCP Compute Engine, Load Balancers and Cloud SQL.",Cloud Engineer
+"Created infrastructure using Terraform and automated provisioning.",Cloud Engineer
+"Implemented monitoring and alerts using CloudWatch and Grafana.",Cloud Engineer
+"Configured CI/CD pipelines for cloud deployments using GitHub Actions.",Cloud Engineer
+"Managed Kubernetes clusters using EKS and Helm charts.",Cloud Engineer
+
+"Configured CI/CD pipelines using Jenkins for automated build and deployment.",DevOps Engineer
+"Containerized applications using Docker and optimized image layers.",DevOps Engineer
+"Managed Kubernetes clusters, created deployments, services and ingress rules.",DevOps Engineer
+"Set up monitoring using Prometheus and Grafana dashboards.",DevOps Engineer
+"Implemented GitOps workflow using ArgoCD.",DevOps Engineer
+"Automated infrastructure provisioning using Terraform and Ansible.",DevOps Engineer
+"Configured Nginx reverse proxy and load balancing rules.",DevOps Engineer
+"Worked with AWS EC2, ECS, IAM, S3 and CloudWatch for operations.",DevOps Engineer
+"Created shell scripts for build automation and log processing.",DevOps Engineer
+"Configured ELK stack (Elasticsearch, Logstash, Kibana) for centralized logging.",DevOps Engineer
+
+
