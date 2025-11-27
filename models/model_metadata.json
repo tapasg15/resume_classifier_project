@@ -1,0 +1,7 @@
+{
+    "name": "resume_pipeline",
+    "version": "v1",
+    "trained_on": "2025-11-26",
+    "dataset_rows": 1200,
+    "accuracy": 0.87
+}

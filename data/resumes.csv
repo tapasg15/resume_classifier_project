@@ -1,0 +1,24 @@
+text,category
+"Skilled in Java, Spring Boot, MySQL, REST APIs, and Microservices. Worked on backend development for ecommerce platform.",Software Developer
+"Developed banking application using Python, Flask, SQLite and JWT Authentication. Good understanding of OOP and Git.",Software Developer
+"Experience with C#, .NET Core, SQL Server, LINQ, and Azure cloud deployment. Built desktop inventory management app.",Software Developer
+"Worked on Android development using Kotlin, Firebase, MVVM, and Retrofit. Published app on Play Store.",Software Developer
+"Built scalable backend services using Node.js, Express, MongoDB, and Redis with JWT auth.",Software Developer
+
+"Designed responsive websites using HTML, CSS, JavaScript and Tailwind CSS. Familiar with SEO and UI/UX.",Web Developer
+"Experience in React.js, Redux, REST APIs, Firebase and building dashboards. Worked on portfolio website.",Web Developer
+"Built WordPress websites with custom themes and plugins. Experienced in PHP and MySQL.",Web Developer
+"Familiar with MERN stack: MongoDB, Express, React, Node. Built social media clone project.",Web Developer
+"Skilled in Bootstrap, jQuery, AJAX and integrating third-party APIs. Built real estate listing website.",Web Developer
+
+"Skilled in Excel, SQL, Power BI, and data cleaning. Created dashboards for sales and revenue analysis.",Data Analyst
+"Worked on ETL pipelines, Pandas, NumPy, Matplotlib, and Seaborn. Built data visualization for healthcare dataset.",Data Analyst
+"Experience in Tableau, MySQL, forecasting models, and KPI reporting for marketing data.",Data Analyst
+"Performed statistical analysis using Python, Scikit-learn and created business insights for retail dataset.",Data Analyst
+"Built Excel-based MIS reports, automated analytics with Python, and worked with CSV and SQL datasets.",Data Analyst
+
+"Implemented machine learning models using Scikit-learn: logistic regression, SVM, decision trees, random forest.",Machine Learning Engineer
+"Worked on NLP preprocessing using NLTK and spaCy. Built text classification model for sentiment analysis.",Machine Learning Engineer
+"Implemented CNN using TensorFlow/Keras for image classification on MNIST dataset. Achieved 97% accuracy.",Machine Learning Engineer
+"Developed end-to-end ML pipeline including data cleaning, feature scaling, model training, hyperparameter tuning.",Machine Learning Engineer
+"Built recommendation system using collaborative filtering and cosine similarity. Used Pandas and NumPy.",Machine Learning Engineer
